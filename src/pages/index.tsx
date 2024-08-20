@@ -1,10 +1,13 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import { BaseDivider, BaseFlexBox, BaseHeader } from "@/components";
+import BaseButton from "@/components/BaseButton";
+import BaseKeyVisual from "@/components/BaseKeyVisual";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  return <>Hello</>;
-}
+const Home = () => {
+  return (
+    <>
+      <BaseHeader />
+      <BaseKeyVisual />
+    </>
+  );
+};
+export default Home;
