@@ -8,7 +8,10 @@ export interface FlexBoxProps extends BoxProps {
   justifyContent?: "start" | "end" | "center" | "between" | "around" | "evenly";
   alignItems?: "start" | "center" | "end" | "baseline";
   wrap?: boolean;
+  h?: string;
   gap?: keyof SpacingType;
+  gapX?: keyof SpacingType;
+  gapY?: keyof SpacingType;
 }
 
 const BaseFlexBox: FC<FlexBoxProps> = ({ children, ...props }) => {

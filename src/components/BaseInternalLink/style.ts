@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { InternalLinkProps } from ".";
 
 export const StyledInternalLink = styled.a<InternalLinkProps>`
+  display: block;
   font-size: ${(props) =>
     props.fontSize ? theme.fontSizes[props.fontSize] : theme.fontSizes.md};
   font-weight: ${(props) => (props.fontWeight === "bold" ? "bold" : "normal")};
@@ -26,6 +27,8 @@ export const StyledInternalLink = styled.a<InternalLinkProps>`
         return;
     }
   }};
+  line-height: 1.5;
+  margin: ${(props) => (props.m ? theme.spacing[props.m] : 0)};
   &:hover {
     ${(props) => {
       switch (props.variant) {

@@ -16,6 +16,6 @@ export const StyledFormInput = styled(StyledInput)`
 `;
 
 export const StyledSearchInput = styled(StyledInput)`
-  padding: ${theme.spacing.sm};
+  padding: ${theme.spacing.sm} ${theme.spacing.md};
   width: 280px;
 `;

@@ -1,11 +1,14 @@
-import { FC, useEffect, useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FC, ReactNode } from "react";
 import {
   StyledSlider,
+  StyledSliderImage,
   StyledSliderItem,
-  StyledSliderNavigation,
+  StyledSliderWrapper,
 } from "./style";
 
-interface SliderType {
+export interface SliderProps {
   images: ImageType[];
 }
 
@@ -14,42 +17,41 @@ export interface ImageType {
   alt: string;
 }
 
-interface BaseSliderItemProps {
-  image: ImageType;
-  sliderWidth: number; // sliderWidthを受け取る
+interface SliderItemProps {
+  children: ReactNode;
 }
 
-const BaseSliderItem: FC<BaseSliderItemProps> = ({ image, sliderWidth }) => {
-  return <StyledSliderItem image={image} sliderWidth={sliderWidth} />;
+interface SliderImageProps {
+  image: ImageType;
+}
+
+const BaseSliderItem: FC<SliderItemProps> = ({ children }) => {
+  return <StyledSliderItem>{children}</StyledSliderItem>;
+};
+const BaseSliderImage: FC<SliderImageProps> = ({ image }) => {
+  return <StyledSliderImage image={image} />;
 };
 
-const BaseSlider: FC<SliderType> = ({ images }) => {
-  const [sliderWidth, setSliderWidth] = useState<number | undefined>(undefined); // 初期値をundefinedに設定
-
-  useEffect(() => {
-    const updateWidth = () => {
-      const width = window.innerWidth * 0.86;
-      setSliderWidth(width * images.length);
-    };
-
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-
-    return () => window.removeEventListener("resize", updateWidth);
-  }, [images.length]);
-
+const BaseSlider: FC<SliderProps> = ({ images }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    arrows: true,
+    autoplay: true,
+    centerMode: true,
+    centerPadding: "20%",
+    pauseOnHover: false,
+  };
   return (
-    <StyledSlider sliderWidth={sliderWidth || 0}>
-      {/* sliderWidthがundefinedの場合に備え、0を指定 */}
-      {[...images, ...images].map((image, index) => (
-        <BaseSliderItem
-          key={index}
-          image={image}
-          sliderWidth={sliderWidth || 0}
-        />
-      ))}
-    </StyledSlider>
+    <StyledSliderWrapper>
+      <StyledSlider {...settings}>
+        {images.map((image) => (
+          <BaseSliderItem>
+            <BaseSliderImage image={image} />
+          </BaseSliderItem>
+        ))}
+      </StyledSlider>
+    </StyledSliderWrapper>
   );
 };
-
 export default BaseSlider;

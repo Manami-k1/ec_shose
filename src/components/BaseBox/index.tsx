@@ -10,10 +10,13 @@ export interface BoxProps extends React.ComponentPropsWithoutRef<"div"> {
   px?: keyof SpacingType;
   py?: keyof SpacingType;
   p?: keyof SpacingType;
+  m?: keyof SpacingType | "auto";
   w?: string;
+  pos?: "absolute" | "relative";
   bgColor?: keyof ColorsType;
   fontSize?: keyof FontSizeType;
   boxShadow?: boolean;
+  as?: React.ElementType;
 }
 const BaseBox: FC<BoxProps> = ({ children, ...props }) => {
   return <StyledBox {...props}>{children}</StyledBox>;

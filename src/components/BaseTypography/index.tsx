@@ -1,16 +1,27 @@
 import { FC } from "react";
+import { StyledTypography } from "./style";
+import { ColorsType, FontSizeType, SpacingType } from "../../types/theme";
 
-interface TypographyProps extends React.ComponentPropsWithoutRef<"p"> {
-  el?: "p" | "span";
+export interface TypographyProps extends React.ComponentPropsWithoutRef<"p"> {
+  as?: "p" | "span";
+  fontWeight?: "normal" | "bold";
+  fontSize?: keyof FontSizeType;
+  textAlign?: "center";
+  color?: keyof ColorsType;
+  variant?: "block";
+  px?: keyof SpacingType;
+  py?: keyof SpacingType;
 }
 const BaseTypography: FC<TypographyProps> = ({
   children,
-  el = "p",
+  as = "p",
   ...props
 }) => {
-  if (el === "p") {
-    return <p {...props}>{children}</p>;
-  }
-  return <span {...props}>{children}</span>;
+  return (
+    <StyledTypography as={as} {...props}>
+      {children}
+    </StyledTypography>
+  );
 };
+
 export default BaseTypography;

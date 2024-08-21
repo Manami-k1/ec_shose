@@ -18,6 +18,7 @@ export const theme = {
     main: "#F5F5F5",
     divider: "#999999",
     gray: "#555555",
+    lightGray: "#EEEEEE",
     accent: "#FF9D42",
     sub: "#FF7A00",
     alert: "#F92C2C",
@@ -31,7 +32,7 @@ export const theme = {
     lg: "16px",
     xl: "18px",
     "2xl": "20px",
-    "3xl": "26px",
+    "3xl": "24px",
   } as FontSizeType,
   spacing: {
     "0": "0",
@@ -43,5 +44,6 @@ export const theme = {
     "2xl": "24px",
     "3xl": "32px",
     "4xl": "64px",
+    "5xl": "128px",
   } as SpacingType,
 };

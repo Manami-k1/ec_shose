@@ -6,6 +6,7 @@ const globalStyles = css`
     box-sizing: border-box;
   }
   body {
+    line-height: 1.4;
     color: ${theme.colors.black};
     background-color: ${theme.colors.white};
     font-size: ${theme.fontSizes.md};
@@ -23,6 +24,11 @@ const globalStyles = css`
   }
   a {
     color: ${theme.colors.black};
+    line-height: 1.4;
+    width: fit-content;
+  }
+  li {
+    list-style: none;
   }
 `;
 

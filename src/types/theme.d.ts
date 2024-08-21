@@ -6,6 +6,7 @@ type ColorKeys =
   | "main"
   | "divider"
   | "gray"
+  | "lightGray"
   | "accent"
   | "sub"
   | "alert"
@@ -22,7 +23,8 @@ type SpacingKeys =
   | "xl"
   | "2xl"
   | "3xl"
-  | "4xl";
+  | "4xl"
+  | "5xl";
 
 export type ColorsType = Record<ColorKeys, string>;
 export type FontSizeType = Record<FontSizeKeys, string>;

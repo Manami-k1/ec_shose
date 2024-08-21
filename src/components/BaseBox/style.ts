@@ -34,7 +34,9 @@ export const StyledBox = styled.div<BoxProps>`
       : props.p
       ? theme.spacing[props.p]
       : "0"};
+  position: ${(props) => props.pos && props.pos};
   width: ${(props) => props.w || "auto"}; // width のデフォルト値
   background-color: ${(props) => props.bgColor && theme.colors[props.bgColor]};
   box-shadow: ${(props) => props.boxShadow && `2px 2px ${theme.colors.gray}`};
+  margin: ${(props) => props.m && props.m};
 `;

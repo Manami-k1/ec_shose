@@ -1,26 +1,42 @@
-import { FontSizeType } from "@/types/theme";
-import React, { FC } from "react";
+import React, { FC, ElementType } from "react";
 import { StyledHeading } from "./style";
+import { theme } from "@/styles/theme";
+import BaseTypography from "../BaseTypography";
 
 export interface HeadingProps extends React.HTMLProps<HTMLHeadingElement> {
-  level?: 1 | 2 | 3 | 4 | 5 | 6; // h1〜h6 のいずれか
-  fontSize?: keyof FontSizeType;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  fontSize?: keyof typeof theme.fontSizes;
   fontWeight?: "normal" | "bold";
+  variant?: "section";
+  description?: string;
 }
 
 const BaseHeading: FC<HeadingProps> = ({
-  level = 1,
+  as = "h1",
   fontSize,
+  fontWeight,
+  variant,
   children,
-  as,
+  description,
   ...rest
 }) => {
-  // level プロパティに基づいてタグを動的に選択
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  // const Tag: ElementType = `h${level}`;
 
   return (
-    <StyledHeading as={Tag} fontSize={fontSize} {...rest}>
+    <StyledHeading
+      as={as}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      variant={variant}
+      description={description}
+      {...rest}
+    >
       {children}
+      {description && (
+        <BaseTypography as="span" color="sub" fontSize="xs" m="sm">
+          {description}
+        </BaseTypography>
+      )}
     </StyledHeading>
   );
 };

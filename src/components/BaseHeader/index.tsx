@@ -11,7 +11,7 @@ interface HeaderProps extends React.ComponentPropsWithoutRef<"div"> {}
 const BaseHeader: FC<HeaderProps> = () => {
   return (
     <>
-      <BaseBox py="lg">
+      <BaseBox py="md">
         <BaseContainer>
           <BaseFlexBox gap="lg" justifyContent="end">
             <BaseInternalLink
@@ -40,13 +40,15 @@ const BaseHeader: FC<HeaderProps> = () => {
       <BaseBox>
         <BaseContainer>
           <BaseFlexBox alignItems="center" justifyContent="between">
-            <BaseHeading fontSize="3xl">SAMPLE ECサイト</BaseHeading>
+            <BaseInternalLink href="/" variant="contained">
+              <BaseHeading>ECサイト</BaseHeading>
+            </BaseInternalLink>
             <BaseBox py="lg">
               <BaseFlexBox
                 alignItems="center"
                 justifyContent="end"
                 gap="sm"
-                bottom="md"
+                bottom="sm"
               >
                 <BaseInternalLink href="/" variant="contained">
                   お気に入り
@@ -64,9 +66,9 @@ const BaseHeader: FC<HeaderProps> = () => {
           </BaseFlexBox>
         </BaseContainer>
       </BaseBox>
-      <BaseBox bgColor="accent" py="xl">
+      <BaseBox bgColor="accent" py="lg">
         <BaseContainer>
-          <BaseFlexBox justifyContent="center" wrap gap="4xl">
+          <BaseFlexBox justifyContent="center" wrap gapX="4xl" gapY="lg">
             <BaseInternalLink
               href="/"
               fontWeight="bold"
