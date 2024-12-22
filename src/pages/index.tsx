@@ -21,8 +21,8 @@ import BaseTypography from "@/components/BaseTypography";
 
 const Home = () => {
   const newItems = 20;
-  const pickupItems = 5;
-  const saleItems = 5;
+  const pickupItems = 6;
+  const saleItems = 6;
   return (
     <>
       <BaseHeader />
@@ -84,7 +84,7 @@ const Home = () => {
                   新規商品
                 </BaseHeading>
                 <BaseBox top="3xl">
-                  <BaseGrid tempCol="140px" gapX="xl" gapY="3xl">
+                  <BaseGrid tempCol="120px" gapX="xl" gapY="3xl">
                     {Array.from({ length: newItems }).map((_, i) => (
                       <BaseGridItem>
                         <BaseCard>
@@ -147,7 +147,7 @@ const Home = () => {
                   あなたへのおすすめ
                 </BaseHeading>
                 <BaseBox top="3xl">
-                  <BaseGrid tempCol="140px" gapX="xl" gapY="3xl">
+                  <BaseGrid tempCol="120px" gapX="xl" gapY="3xl">
                     {Array.from({ length: pickupItems }).map((_, i) => (
                       <BaseGridItem>
                         <BaseCard>
@@ -209,7 +209,7 @@ const Home = () => {
                   セールスアイテム
                 </BaseHeading>
                 <BaseBox top="3xl">
-                  <BaseGrid tempCol="140px" gapX="xl" gapY="3xl">
+                  <BaseGrid tempCol="120px" gapX="xl" gapY="3xl">
                     {Array.from({ length: saleItems }).map((_, i) => (
                       <BaseGridItem>
                         <BaseCard>

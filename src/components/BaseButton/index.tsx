@@ -4,7 +4,7 @@ import { StyledButton } from "./style";
 import { ColorsType } from "@/types/theme";
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
-  color: keyof ColorsType;
+  color?: keyof ColorsType;
 }
 
 /**

@@ -33,7 +33,7 @@ const BaseHeading: FC<HeadingProps> = ({
     >
       {children}
       {description && (
-        <BaseTypography as="span" color="sub" fontSize="xs" m="sm">
+        <BaseTypography as="span" color="sub" fontSize="xs">
           {description}
         </BaseTypography>
       )}

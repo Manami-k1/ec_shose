@@ -19,6 +19,7 @@ export const theme = {
     divider: "#999999",
     gray: "#555555",
     lightGray: "#EEEEEE",
+    lightPink:'#FFE8E8',
     accent: "#FF9D42",
     sub: "#FF7A00",
     alert: "#F92C2C",

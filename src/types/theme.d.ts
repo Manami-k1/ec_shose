@@ -7,6 +7,7 @@ type ColorKeys =
   | "divider"
   | "gray"
   | "lightGray"
+  | "lightPink"
   | "accent"
   | "sub"
   | "alert"

@@ -11,6 +11,7 @@ export const StyledSliderWrapper = styled.div`
     position: relative;
     margin-top: -18px;
   } */
+  /* overflow-x: hidden; */
 `;
 
 export const StyledSlider = styled(Slider)`
@@ -18,8 +19,9 @@ export const StyledSlider = styled(Slider)`
 `;
 
 export const StyledSliderItem = styled.li`
-  height: 450px;
-  padding: 0 25px;
+  height: 400px;
+  padding: 0 20px;
+
   background: ${theme.colors.main};
 `;
 

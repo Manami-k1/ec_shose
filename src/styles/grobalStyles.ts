@@ -10,6 +10,7 @@ const globalStyles = css`
     color: ${theme.colors.black};
     background-color: ${theme.colors.white};
     font-size: ${theme.fontSizes.md};
+    overflow-x: hidden;
   }
   p {
     margin: 0;

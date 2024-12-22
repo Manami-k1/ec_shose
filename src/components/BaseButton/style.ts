@@ -1,14 +1,18 @@
+import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 
 export const StyledButton = styled.button`
-  background-color: #0070f3;
+  background-color: ${theme.colors.sub};
   color: ${(props) => props.color || "#fff"};
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  padding: ${theme.spacing["xl"]} ${theme.spacing["3xl"]};
+  border: 1px solid ${theme.colors.sub};
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 
   &:hover {
-    background-color: #005bb5;
+    background-color: ${theme.colors.white};
+    border: 1px solid ${theme.colors.sub};
+    color: ${theme.colors.sub};
   }
 `;

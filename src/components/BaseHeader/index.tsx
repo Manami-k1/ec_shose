@@ -11,11 +11,11 @@ interface HeaderProps extends React.ComponentPropsWithoutRef<"div"> {}
 const BaseHeader: FC<HeaderProps> = () => {
   return (
     <>
-      <BaseBox py="md">
+      <BaseBox py="sm">
         <BaseContainer>
           <BaseFlexBox gap="lg" justifyContent="end">
             <BaseInternalLink
-              href="/"
+              href="/signup"
               variant="contained"
               fontSize="sm"
               fontWeight="bold"
@@ -43,17 +43,17 @@ const BaseHeader: FC<HeaderProps> = () => {
             <BaseInternalLink href="/" variant="contained">
               <BaseHeading>ECサイト</BaseHeading>
             </BaseInternalLink>
-            <BaseBox py="lg">
+            <BaseBox py="md">
               <BaseFlexBox
                 alignItems="center"
                 justifyContent="end"
                 gap="sm"
                 bottom="sm"
               >
-                <BaseInternalLink href="/" variant="contained">
+                <BaseInternalLink href="/" variant="contained" fontSize="sm">
                   お気に入り
                 </BaseInternalLink>
-                <BaseInternalLink href="/" variant="contained">
+                <BaseInternalLink href="/" variant="contained" fontSize="sm">
                   カート
                 </BaseInternalLink>
               </BaseFlexBox>
@@ -66,7 +66,7 @@ const BaseHeader: FC<HeaderProps> = () => {
           </BaseFlexBox>
         </BaseContainer>
       </BaseBox>
-      <BaseBox bgColor="accent" py="lg">
+      <BaseBox bgColor="accent" py="xl">
         <BaseContainer>
           <BaseFlexBox justifyContent="center" wrap gapX="4xl" gapY="lg">
             <BaseInternalLink
@@ -74,7 +74,7 @@ const BaseHeader: FC<HeaderProps> = () => {
               fontWeight="bold"
               variant="contained"
               color="white"
-              fontSize="xl"
+              fontSize="lg"
             >
               カテゴリ
             </BaseInternalLink>
@@ -83,7 +83,7 @@ const BaseHeader: FC<HeaderProps> = () => {
               fontWeight="bold"
               variant="contained"
               color="white"
-              fontSize="xl"
+              fontSize="lg"
             >
               新規商品
             </BaseInternalLink>
@@ -92,7 +92,7 @@ const BaseHeader: FC<HeaderProps> = () => {
               fontWeight="bold"
               variant="contained"
               color="white"
-              fontSize="xl"
+              fontSize="lg"
             >
               SALE商品
             </BaseInternalLink>
@@ -101,7 +101,7 @@ const BaseHeader: FC<HeaderProps> = () => {
               fontWeight="bold"
               variant="contained"
               color="white"
-              fontSize="xl"
+              fontSize="lg"
             >
               期間限定商品
             </BaseInternalLink>
@@ -110,9 +110,27 @@ const BaseHeader: FC<HeaderProps> = () => {
               fontWeight="bold"
               variant="contained"
               color="white"
-              fontSize="xl"
+              fontSize="lg"
             >
               あなたへのおすすめ
+            </BaseInternalLink>
+            <BaseInternalLink
+              href="/"
+              fontWeight="bold"
+              variant="contained"
+              color="white"
+              fontSize="lg"
+            >
+              店舗情報
+            </BaseInternalLink>
+            <BaseInternalLink
+              href="/"
+              fontWeight="bold"
+              variant="contained"
+              color="white"
+              fontSize="lg"
+            >
+              その他
             </BaseInternalLink>
           </BaseFlexBox>
         </BaseContainer>
