@@ -85,8 +85,8 @@ const Home = () => {
                 </BaseHeading>
                 <BaseBox top="3xl">
                   <BaseGrid tempCol="120px" gapX="xl" gapY="3xl">
-                    {Array.from({ length: newItems }).map((_, i) => (
-                      <BaseGridItem>
+                    {Array.from({ length: newItems }).map((_, index) => (
+                      <BaseGridItem key={index}>
                         <BaseCard>
                           <BaseFlexBox
                             justifyContent="between"
@@ -148,8 +148,8 @@ const Home = () => {
                 </BaseHeading>
                 <BaseBox top="3xl">
                   <BaseGrid tempCol="120px" gapX="xl" gapY="3xl">
-                    {Array.from({ length: pickupItems }).map((_, i) => (
-                      <BaseGridItem>
+                    {Array.from({ length: pickupItems }).map((_, index) => (
+                      <BaseGridItem key={index}>
                         <BaseCard>
                           <BaseFlexBox
                             justifyContent="between"
@@ -210,8 +210,8 @@ const Home = () => {
                 </BaseHeading>
                 <BaseBox top="3xl">
                   <BaseGrid tempCol="120px" gapX="xl" gapY="3xl">
-                    {Array.from({ length: saleItems }).map((_, i) => (
-                      <BaseGridItem>
+                    {Array.from({ length: saleItems }).map((_, index) => (
+                      <BaseGridItem key={index}>
                         <BaseCard>
                           <BaseFlexBox
                             justifyContent="between"

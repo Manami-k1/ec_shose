@@ -45,8 +45,8 @@ const BaseSlider: FC<SliderProps> = ({ images }) => {
   return (
     <StyledSliderWrapper>
       <StyledSlider {...settings}>
-        {images.map((image) => (
-          <BaseSliderItem>
+        {images.map((image, index) => (
+          <BaseSliderItem key={index}>
             <BaseSliderImage image={image} />
           </BaseSliderItem>
         ))}
